@@ -33,7 +33,7 @@ export default function About() {
     const projects = useCount(10, 1200, 0);
 
     return (
-        <section className="py-32 px-8 lg:px-24 bg-black text-white relative z-20">
+        <section id="about" className="py-32 px-8 lg:px-24 bg-black text-white relative z-20">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                 {/* Portrait Placeholder */}
                 <motion.div
@@ -41,13 +41,13 @@ export default function About() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="order-2 lg:order-1 relative aspect-[3/4] w-full max-w-sm mx-auto bg-neutral-900 rounded-2xl overflow-hidden border border-white/10 group"
+                    className="order-2 lg:order-1 relative aspect-[3/4] w-full max-w-sm mx-auto bg-neutral-900 rounded-2xl overflow-hidden border border-white/10 group shadow-[0_0_30px_6px_rgba(99,102,241,0.35)] lg:shadow-[0_0_25px_4px_rgba(99,102,241,0.25)] lg:hover:shadow-[0_0_45px_10px_rgba(99,102,241,0.45)] transition-shadow duration-500"
                 >
                     {/* Portrait Image - Standard Grayscale */}
                     <div className="relative w-full h-full grayscale-0 lg:grayscale lg:group-hover:grayscale-0 transition-all duration-700 ease-out">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            src="/IMG_2874.JPG"
+                            src="/img.jpg"
                             alt="Portrait of the Engineer"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />

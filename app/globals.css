@@ -6,6 +6,10 @@
   --color-dark-gray: #1a1a1a;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
@@ -42,7 +46,16 @@ body::after {
    NOTE: Explicitly exclude card content (.group) and the Hero (section.min-h-screen)
    to avoid touching layouts and card typography. */
 @media (max-width: 767px) {
-  h1, h2, h3, h4, h5, h6, p, .section-lead, .section-desc {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  .section-lead,
+  .section-desc {
     text-align: center;
   }
 

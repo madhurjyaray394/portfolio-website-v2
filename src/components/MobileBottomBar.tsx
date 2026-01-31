@@ -4,16 +4,18 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Play, Pause, SkipBack, SkipForward } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const playlist = [
-    {title: "Raindance",
+    {
+        title: "Raindance",
         artist: "Mtems & Devv",
         src: "/raindance.mp3"
     },
-    {  
-        title: "on da bis",
-        artist: "h6itam",
-        src: "/on_da_bis.mp3"
+    {
+        title: "new drop",
+        artist: "don toliver",
+        src: "/new_drop.mp3"
     },
     {
         title: "Saturn",
@@ -27,6 +29,12 @@ const navItems = [
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: 'mailto:madhurjyaray394@gmail.com' },
+];
+
+const socialLinks = [
+    { name: 'GitHub', href: 'https://github.com/madhurjyaray', icon: FaGithub },
+    { name: 'LinkedIn', href: 'https://linkedin.com/in/madhurjyaray', icon: FaLinkedin },
+    { name: 'Instagram', href: 'https://instagram.com/madhurjyaray', icon: FaInstagram },
 ];
 
 export default function MobileBottomBar() {
@@ -204,45 +212,84 @@ export default function MobileBottomBar() {
                 </button>
             </motion.div>
 
-            {/* Full Screen Menu Overlay */}
+            {/* Right-Side Sliding Panel */}
             <AnimatePresence>
                 {isMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="fixed inset-0 bg-black/95 z-[70] backdrop-blur-xl flex flex-col p-8 md:hidden"
-                    >
-                        <div className="flex justify-between items-center mb-12">
-                            <span className="text-2xl font-bold tracking-tighter">RAY.</span>
-                            <button onClick={() => setIsMenuOpen(false)}>
-                                <X className="w-8 h-8 opacity-70" />
-                            </button>
-                        </div>
+                    <>
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setIsMenuOpen(false)}
+                            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[70] md:hidden"
+                        />
 
-                        <nav className="flex flex-col gap-8">
-                            {navItems.map((item, index) => (
-                                <motion.div
-                                    key={item.name}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: index * 0.1 }}
+                        {/* Side Panel */}
+                        <motion.div
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '100%' }}
+                            transition={{ type: "spring", bounce: 0, duration: 0.4 }}
+                            className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-neutral-950 border-l border-white/10 z-[70] p-8 flex flex-col md:hidden"
+                        >
+                            <div className="flex justify-between items-center mb-16">
+                                <span className="text-xl font-bold text-white tracking-tighter">Madhurjya Ray</span>
+                                <button
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="p-2 text-white hover:text-neutral-400 transition-colors"
                                 >
-                                    <Link
-                                        href={item.href}
-                                        onClick={() => setIsMenuOpen(false)}
-                                        className="text-4xl font-bold text-white/90 hover:text-white"
-                                    >
-                                        {item.name}
-                                    </Link>
-                                </motion.div>
-                            ))}
-                        </nav>
+                                    <X className="w-8 h-8" />
+                                </button>
+                            </div>
 
-                        <div className="mt-auto text-neutral-500 text-sm">
-                            <p>madhurjyaray394@gmail.com</p>
-                        </div>
-                    </motion.div>
+                            <nav className="flex flex-col gap-8">
+                                {navItems.map((item, index) => {
+                                    const isEmail = item.href.startsWith('mailto:');
+
+                                    return (
+                                        <motion.div
+                                            key={item.name}
+                                            initial={{ opacity: 0, x: 20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: index * 0.1 }}
+                                        >
+                                            <a
+                                                href={item.href}
+                                                onClick={() => !isEmail && setIsMenuOpen(false)}
+                                                className="text-4xl font-bold text-white/90 hover:text-white"
+                                            >
+                                                {item.name}
+                                            </a>
+                                        </motion.div>
+                                    );
+                                })}
+                            </nav>
+
+                            {/* Social Icons */}
+                            <div className="mt-auto mb-6">
+                                <div className="flex items-center gap-6 justify-start">
+                                    {socialLinks.map((social) => (
+                                        <a
+                                            key={social.name}
+                                            href={social.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={social.name}
+                                            className="text-white hover:text-neutral-400 transition-colors duration-300"
+                                        >
+                                            <social.icon className="w-6 h-6" />
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="text-neutral-500 text-sm">
+                                <p>madhurjyaray394@gmail.com</p>
+                                <p className="mt-2">© {new Date().getFullYear()} Ray.</p>
+                            </div>
+                        </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </>

@@ -6,15 +6,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, Volume2, VolumeX, X, SkipBack, SkipForward } from 'lucide-react';
 
 const playlist = [
-    
-    {title: "Raindance",
+
+    {
+        title: "Raindance",
         artist: "Mtems & Devv",
         src: "/raindance.mp3"
     },
-    {  
-        title: "montagem alquimia",
-        artist: "h6itam",
-        src: "/montagem-alquimia-ultra-slowed.mp3"
+    {
+        title: "new drop",
+        artist: "don toliver",
+        src: "/new_drop.mp3"
     },
     {
         title: "Saturn",
@@ -110,15 +111,28 @@ export default function DesktopDock() {
 
             {/* Navigation */}
             <nav className="flex items-center gap-6">
-                {navItems.map((item) => (
-                    <Link
-                        key={item.name}
-                        href={item.href}
-                        className="text-sm font-medium text-neutral-400 hover:text-white transition-colors uppercase tracking-wider"
-                    >
-                        {item.name}
-                    </Link>
-                ))}
+                {navItems.map((item) => {
+                    // Check if it's an email link
+                    const isEmail = item.href.startsWith('mailto:');
+
+                    return isEmail ? (
+                        <a
+                            key={item.name}
+                            href={item.href}
+                            className="text-sm font-medium text-neutral-400 hover:text-white transition-colors uppercase tracking-wider"
+                        >
+                            {item.name}
+                        </a>
+                    ) : (
+                        <a
+                            key={item.name}
+                            href={item.href}
+                            className="text-sm font-medium text-neutral-400 hover:text-white transition-colors uppercase tracking-wider"
+                        >
+                            {item.name}
+                        </a>
+                    );
+                })}
             </nav>
 
             {/* Vertical Divider */}

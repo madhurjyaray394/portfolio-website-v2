@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Hero() {
     return (
-        <section className="min-h-screen flex flex-col justify-center px-8 lg:px-24 pt-20 relative overflow-hidden bg-black selection:bg-white selection:text-black">
+        <section className="min-h-screen flex flex-col justify-center px-8 lg:px-24 pt-20 pb-16 md:pb-20 lg:pb-24 relative overflow-hidden bg-black selection:bg-white selection:text-black">
             {/* Background Gradient */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/[0.02] rounded-full blur-[128px] pointer-events-none" />
 
@@ -87,14 +87,14 @@ export default function Hero() {
 
                         {/* Actions */}
                         <div className="mt-auto w-full space-y-3 pt-6">
-                            <Link href="https://cal.com" target="_blank" className="relative flex items-center justify-center w-full p-4 bg-white text-black rounded-2xl font-bold text-base hover:bg-neutral-200 transition-colors group/btn">
+                            <Link href="https://cal.com" target="_blank" rel="noopener noreferrer" className="relative flex items-center justify-center w-full p-4 bg-white text-black rounded-2xl font-bold text-base hover:bg-neutral-200 transition-colors group/btn">
                                 <span>Book a call</span>
                                 <ArrowUpRight className="absolute right-4 w-5 h-5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                             </Link>
 
-                            <Link href="#projects" className="flex items-center justify-center w-full p-4 bg-white/5 border border-white/10 rounded-2xl font-medium text-sm text-white hover:bg-white/10 transition-colors">
+                            <a href="#projects" className="flex items-center justify-center w-full p-4 bg-white/5 border border-white/10 rounded-2xl font-medium text-sm text-white hover:bg-white/10 transition-colors">
                                 View Projects
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </motion.div>
@@ -106,7 +106,7 @@ export default function Hero() {
                 transition={{ delay: 1, duration: 1 }}
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 font- bold text-sm animate-bounce"
             >
-                Professional at
+                scroll down
             </motion.div>
         </section>
     );

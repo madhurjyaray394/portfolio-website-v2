@@ -13,9 +13,11 @@ export default function Home() {
       <Projects />
       <Collaboration />
 
-      {/* Footer (Simplified) */}
-      <footer className="py-12 border-t border-white/10 text-center text-neutral-500 text-sm">
-        Madhu (Madhurjya Ray) &copy; 2026
+      {/* Footer (Desktop only - mobile copyright is in Collaboration section) */}
+      <footer className="hidden md:block py-12 border-t border-white/10 text-neutral-500 text-sm">
+        <div className="max-w-7xl mx-auto px-2 text-left">
+          Madhu (Madhurjya Ray) &copy; 2026
+        </div>
       </footer>
     </main>
   );

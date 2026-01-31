@@ -36,7 +36,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section className="py-16 md:py-32 px-8 lg:px-24 bg-black text-white relative z-20">
+        <section id="projects" className="py-16 md:py-32 px-8 lg:px-24 bg-black text-white relative z-20">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-24 gap-8">
                     <motion.h2
@@ -99,23 +99,23 @@ function ProjectCard({ project, index, total }: { project: any, index: number, t
                 className="group relative h-full w-full rounded-3xl overflow-hidden cursor-pointer border border-white/10 shadow-[0_-5px_30px_rgba(255,255,255,0.05)]"
                 style={{ backgroundColor: '#041229' }}
             >
-                     {/* Content Overlay */}
-                     <div className="absolute inset-0 z-20 p-8 md:p-12 flex flex-col justify-between transition-all duration-500 bg-black/40 hover:bg-black/20">
+                {/* Content Overlay */}
+                <div className="absolute inset-0 z-20 p-8 md:p-12 flex flex-col justify-between transition-all duration-500 bg-black/40 hover:bg-black/20">
                     <div className="flex justify-between items-start">
                         <span className="px-4 py-2 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-sm font-medium text-white">
                             {project.category}
                         </span>
                         <div className="flex items-center gap-3">
-                          <div className="bg-white text-black p-3 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                              <ArrowUpRight className="w-5 h-5" />
-                          </div>
+                            <div className="bg-white text-black p-3 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                <ArrowUpRight className="w-5 h-5" />
+                            </div>
 
-                          {/* GitHub logo (white) - appears on hover alongside the arrow */}
-                          <div className="p-3 rounded-full border border-white/20 text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                              <path d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.1 3.29 9.42 7.86 10.95.57.11.78-.25.78-.56 0-.28-.01-1.03-.02-2.02-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18a11.01 11.01 0 012.88-.39c.98.01 1.97.13 2.88.39 2.19-1.5 3.16-1.18 3.16-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.75-.01 3.13 0 .31.21.68.79.56A10.53 10.53 0 0023.5 12.02C23.5 5.73 18.27.5 12 .5z" />
-                            </svg>
-                          </div>
+                            {/* GitHub logo (white) - appears on hover alongside the arrow */}
+                            <div className="p-3 rounded-full border border-white/20 text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.1 3.29 9.42 7.86 10.95.57.11.78-.25.78-.56 0-.28-.01-1.03-.02-2.02-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18a11.01 11.01 0 012.88-.39c.98.01 1.97.13 2.88.39 2.19-1.5 3.16-1.18 3.16-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.75-.01 3.13 0 .31.21.68.79.56A10.53 10.53 0 0023.5 12.02C23.5 5.73 18.27.5 12 .5z" />
+                                </svg>
+                            </div>
                         </div>
 
                     </div>

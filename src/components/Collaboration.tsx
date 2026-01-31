@@ -46,7 +46,7 @@ const steps = [
 
 export default function Collaboration() {
     return (
-        <section className="py-24 md:py-32 px-8 lg:px-24 bg-black text-white relative border-t border-white/10 overflow-hidden">
+        <section id="contact" className="py-24 md:py-32 px-8 lg:px-24 pb-24 md:pb-32 bg-black text-white relative border-t border-white/10 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-20 space-y-6 max-w-3xl">
@@ -89,6 +89,13 @@ export default function Collaboration() {
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </a>
                 </motion.div>
+
+                {/* Copyright - Mobile Safe Zone */}
+                <div className="mt-20 mb-20 md:mb-0 text-center md:text-left">
+                    <p className="text-neutral-500 text-sm">
+                        Madhu (Madhurjya Ray) &copy; 2026
+                    </p>
+                </div>
             </div>
         </section>
     );
@@ -153,5 +160,6 @@ function CollabCard({ step, index, total }: { step: any, index: number, total?: 
                 </div>
             </div>
         </motion.div>
+
     );
 }
