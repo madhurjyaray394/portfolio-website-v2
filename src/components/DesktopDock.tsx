@@ -6,6 +6,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, Volume2, VolumeX, X, SkipBack, SkipForward } from 'lucide-react';
 
 const playlist = [
+    {
+        title: "Daphni",
+        artist: "poly",
+        src: "/Daphni.mp3"
+    },
 
     {
         title: "Raindance",
