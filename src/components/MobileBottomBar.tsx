@@ -8,6 +8,11 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const playlist = [
     {
+        title: "Daphni",
+        artist: "poly",
+        src: "/Daphni.mp3"
+    },
+    {
         title: "Raindance",
         artist: " tems & Dave ",
         src: "/raindance.mp3"
