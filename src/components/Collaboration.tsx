@@ -91,7 +91,7 @@ export default function Collaboration() {
                 </motion.div>
 
                 {/* Copyright - Mobile Safe Zone */}
-                <div className="mt-20 mb-20 md:mb-0 text-center md:text-left">
+                <div className="mt-20 mb-20 md:mb-0 text-center md:text-left md:hidden">
                     <p className="text-neutral-500 text-sm">
                         Madhu (Madhurjya Ray) &copy; 2026
                     </p>

@@ -285,8 +285,8 @@ export default function MobileBottomBar() {
                             </div>
 
                             <div className="text-neutral-500 text-sm">
-                                <p>madhurjyaray394@gmail.com</p>
-                                <p className="mt-2">© {new Date().getFullYear()} Ray.</p>
+                                <p>Built and designed by Madhu</p>
+                                <p className="mt-2">© {new Date().getFullYear()} All rights reserved</p>
                             </div>
                         </motion.div>
                     </>
