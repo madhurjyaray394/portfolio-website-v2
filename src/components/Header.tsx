@@ -15,8 +15,8 @@ const navItems = [
 
 const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/madhurjyaray394', icon: FaGithub },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/madhurjyaray', icon: FaLinkedin },
-    { name: 'Instagram', href: 'https://instagram.com/madhurjyaray', icon: FaInstagram },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/madhurjya-ray-93a880268', icon: FaLinkedin },
+    { name: 'Instagram', href: 'https://www.instagram.com/madhurjya.dev/', icon: FaInstagram },
 ];
 
 export default function Header() {
