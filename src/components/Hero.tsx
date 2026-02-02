@@ -27,7 +27,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight text-white mb-12"
+                        className="text-5xl md:text-7xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-white mb-12"
                     >
                         Building digital products <br className="hidden lg:block" />
                         at the intersection of <br className="hidden lg:block" />
@@ -49,7 +49,7 @@ export default function Hero() {
                     </motion.div>
                 </div>
 
-                {/* Right Card - Designjoy Style (Refactored for Sharp Text) */}
+                {/* Right Card */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
