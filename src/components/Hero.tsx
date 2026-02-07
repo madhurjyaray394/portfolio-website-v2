@@ -42,8 +42,8 @@ export default function Hero() {
                     >
                         <div className="flex flex-col gap-1 items-center lg:items-start">
                             <span className="text-neutral-500 text-xs uppercase tracking-wider font-semibold">Email me directly</span>
-                            <Link href="mailto:madhurjyaray394@gmail.com" className="text-neutral-300 hover:text-white transition-colors border-b border-transparent hover:border-white/50 pb-0.5 font-medium">
-                                madhurjyaray394@gmail.com
+                            <Link href="mailto:madhurjyaray.business@gmail.com" className="text-neutral-300 hover:text-white transition-colors border-b border-transparent hover:border-white/50 pb-0.5 font-medium">
+                                madhurjyaray.business@gmail.com
                             </Link>
                         </div>
                     </motion.div>
@@ -61,8 +61,8 @@ export default function Hero() {
 
                     {/* Gradient Blobs (Clipped inside background) */}
                     <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-500/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-gray-500/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-gray-500/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
                     </div>
 
                     {/* Content Layer (Relative z-10 for Sharpness) */}
@@ -80,7 +80,7 @@ export default function Hero() {
                                     Build with me
                                 </h3>
                                 <p className="text-neutral-400 text-base leading-relaxed max-w-sm">
-                                    Frontend-focused, performance & UX driven developer ready to bring your vision to life.
+                                    Frontend-focused, performance driven developer ready to bring your vision to life.
                                 </p>
                             </div>
                         </div>

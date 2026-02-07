@@ -14,15 +14,6 @@ const projects = [
         liveUrl: "https://task-flowly.vercel.app/",
         githubUrl: "https://github.com/madhurjyaray394/Flow-"
     },
-    {
-        title: "coming soon",
-        category: "coming soon",
-        description: "",
-        year: "2023",
-        size: "small",
-        liveUrl: "",
-        githubUrl: "https://github.com/madhurjyaray394"
-    },
 
 
 ];
@@ -31,24 +22,16 @@ export default function Projects() {
     return (
         <section id="projects" className="py-16 md:py-32 px-8 lg:px-24 bg-black text-white relative z-20">
             <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-24 gap-8">
+                <div className="flex justify-center items-center mb-10 md:mb-24">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight"
+                        className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight text-center"
                     >
-                        Selected Work
+                        Projects
                     </motion.h2>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="text-neutral-400 text-lg max-w-sm text-left md:text-right"
-                    >
-                        A collection of projects that define my journey in digital product creation.
-                    </motion.div>
                 </div>
 
                 <div className="flex flex-col gap-0 w-full">
