@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
+import TiltedCard from './TiltedCard';
 
 function useCount(target: number, duration = 1200, decimals = 0) {
     const [value, setValue] = useState(0);
@@ -35,27 +36,41 @@ export default function About() {
     return (
         <section id="about" className="py-32 px-8 lg:px-24 bg-black text-white relative z-20">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                {/* Portrait Placeholder */}
+                {/* Portrait - Mobile/Tablet (Standard) */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
                     style={{ willChange: 'transform, opacity' }}
-                    className="order-2 lg:order-1 relative aspect-[3/4] w-full max-w-sm mx-auto bg-neutral-900 rounded-2xl overflow-hidden border border-white/10 group shadow-[0_0_30px_6px_rgba(99,102,241,0.35)] lg:shadow-[0_0_25px_4px_rgba(99,102,241,0.25)] lg:hover:shadow-[0_0_45px_10px_rgba(99,102,241,0.45)] transition-shadow duration-500 will-change-transform"
+                    className="block lg:hidden order-2 lg:order-1 relative aspect-[3/4] w-full max-w-sm mx-auto bg-neutral-900 rounded-2xl overflow-hidden border border-white/10 group shadow-[0_0_30px_6px_rgba(99,102,241,0.35)] transition-shadow duration-500 will-change-transform"
                 >
-                    {/* Portrait Image - Standard Grayscale */}
-                    <div className="relative w-full h-full grayscale-0 lg:grayscale lg:group-hover:grayscale-0 transition-all duration-700 ease-out">
+                    <div className="relative w-full h-full grayscale-0 transition-all duration-700 ease-out">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src="/IMG_3813.JPG"
                             alt="Portrait of the Engineer"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
-                        {/* Subtle gradient at bottom for text readability if needed, otherwise clean */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
                     </div>
                 </motion.div>
+
+                {/* Portrait - Desktop (TiltedCard) */}
+                <div className="hidden lg:block order-2 lg:order-1 w-full max-w-sm mx-auto">
+                    <TiltedCard
+                        imageSrc="/IMG_3813.JPG"
+                        altText="Portrait of the Engineer"
+                        containerHeight="400px"
+                        containerWidth="100%"
+                        imageHeight="400px"
+                        imageWidth="450px"
+                        scaleOnHover={1.05}
+                        rotateAmplitude={12}
+                        showMobileWarning={false}
+                        showTooltip={false}
+                    />
+                </div>
 
                 {/* Text Content */}
                 <motion.div
@@ -91,7 +106,7 @@ export default function About() {
 
                         <div className="pt-6 pb-10 flex justify-center sm:justify-start">
                             <a
-                                href="mailto:madhurjyaray394@gmail.com"
+                                href="mailto:madhurjyaray.business@gmail.com"
                                 className="mx-auto
                                          inline-flex items-center gap-4
                                             px-13 py-5 sm:px-10 sm:py-5 rounded-xl
